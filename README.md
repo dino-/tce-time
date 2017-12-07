@@ -3,6 +3,8 @@
 
 ## Synopsis
 
+Utility and conversion functions for working with time and date (Haskell)
+
 
 ## Description
 
