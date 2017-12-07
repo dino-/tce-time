@@ -1,3 +1,6 @@
+-- License: ISC (see LICENSE)
+-- Dino Morelli <dino@ui3.info>
+
 import Test.Hspec
 
 import TCE.Test.Data.Time.Epoch ( test_epochUTCConv )

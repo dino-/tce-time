@@ -3,13 +3,12 @@
 
 module TCE.Test.Data.Time.Milli ( test_milliUTCConv ) where
 
-import TCE.Data.Time.Milli
-   ( milliToUTCTime, utcTimeToMilli )
-import Test.Hspec
-import Test.Hspec.QuickCheck
-import Test.QuickCheck
+import TCE.Data.Time.Milli ( milliToUTCTime, utcTimeToMilli )
+import Test.Hspec ( SpecWith, describe )
+import Test.Hspec.QuickCheck ( prop )
+import Test.QuickCheck ( Large (..) )
 
-import TCE.Test.BoundedInteger
+import TCE.Test.BoundedInteger ( BoundedInteger (..) )
 
 
 test_milliUTCConv :: SpecWith ()
