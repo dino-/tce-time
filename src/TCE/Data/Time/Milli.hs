@@ -8,17 +8,17 @@ module TCE.Data.Time.Milli
    where
 
 import Data.Time ( UTCTime )
-import Data.Time.Clock.POSIX ( posixSecondsToUTCTime, utcTimeToPOSIXSeconds )
+import Data.Time.Clock.POSIX
+   ( posixSecondsToUTCTime, utcTimeToPOSIXSeconds )
 
 
-{- Parse a number representing the time in milliseconds into a
+{- | Parse a number representing the time in milliseconds into a
    Haskell UTCTime data structure
 -}
 milliToUTCTime :: Integral a => a -> UTCTime
 milliToUTCTime = posixSecondsToUTCTime . (/ 1000) . fromIntegral
 
 
-{- Convert a UTCTime into milliseconds since epoch
--}
+-- | Convert a UTCTime into milliseconds
 utcTimeToMilli :: Integral a => UTCTime -> a
 utcTimeToMilli = round . (* (1000)) . utcTimeToPOSIXSeconds
