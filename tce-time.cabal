@@ -16,17 +16,23 @@ extra-source-files:  README.md
 
 library
    hs-source-dirs:   src
-   exposed-modules:  Foo
+   exposed-modules:  TCE.Data.Time.Epoch
    ghc-options:      -Wall -fwarn-tabs
    default-language: Haskell2010
    build-depends:      base >= 4.7 && < 5
+                     , time
 
 test-suite tests
-   hs-source-dirs:   testsuite
+   hs-source-dirs:   tests, src
    main-is:          tests.hs
    ghc-options:      -Wall -fwarn-tabs
    default-language: Haskell2010
    type:             exitcode-stdio-1.0
    build-depends:      base >= 4.7 && < 5
+                     , hspec
+                     , QuickCheck
                      , tce-time
-   other-modules:    Foo
+                     , time
+   other-modules:    TCE.Data.Time.Epoch
+                     TCE.Test.BoundedInteger
+                     TCE.Test.Data.Time.Epoch
