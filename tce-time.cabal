@@ -2,17 +2,21 @@ name:                tce-time
 version:             1.0
 synopsis:            Utility and conversion functions for working with time and date
 description:         Please see README.md
-homepage:            
+homepage:            https://github.com/dino-/tce-time.git
 license:             ISC
 license-file:        LICENSE
 author:              Dino Morelli
 maintainer:          dino@ui3.info
 copyright:           2017 Dino Morelli
-category:            Unclassified
+category:            Time
 build-type:          Simple
 cabal-version:       >=1.10
 extra-source-files:  README.md
                      stack.yaml
+
+source-repository head
+   type: git
+   location: https://github.com/dino-/tce-time.git
 
 library
    hs-source-dirs:   src
